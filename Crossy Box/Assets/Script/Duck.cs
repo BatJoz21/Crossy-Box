@@ -19,7 +19,6 @@ public class Duck : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             dir += Vector3.forward;
-            //transform.DOMoveZ(transform.position.z + 1, 0.5f);
         }
         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {

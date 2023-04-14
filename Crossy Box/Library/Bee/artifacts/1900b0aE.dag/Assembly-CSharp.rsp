@@ -360,6 +360,10 @@
 "Assets/Low Poly Guns/Scripts/GunsMenu.cs"
 "Assets/Low Poly Guns/Scripts/GunView.cs"
 "Assets/Script/Duck.cs"
+"Assets/Script/Grass.cs"
+"Assets/Script/PlayManager.cs"
+"Assets/Script/Road.cs"
+"Assets/Script/Terrain.cs"
 -langversion:9.0
 
 /deterministic
