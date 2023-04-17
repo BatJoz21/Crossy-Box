@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Duck : MonoBehaviour
 {
     [SerializeField, Range(0, 1)] float moveDuration;
     [SerializeField, Range(0, 1)] float jumpHeight;
+
+    public UnityEvent<Vector3> OnJumpEnd;
 
     void Update()
     {
@@ -43,8 +46,13 @@ public class Duck : MonoBehaviour
 
     public void Move(Vector3 dir)
     {
-        transform.DOJump(transform.position + dir, jumpHeight, 1, moveDuration);
+        transform.DOJump(transform.position + dir, jumpHeight, 1, moveDuration).onComplete = BroadcastPositionOnJumpEnd;
 
         transform.forward = dir;
+    }
+
+    private void BroadcastPositionOnJumpEnd()
+    {
+        OnJumpEnd.Invoke(transform.position);
     }
 }

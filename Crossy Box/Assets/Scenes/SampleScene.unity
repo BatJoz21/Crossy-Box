@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -301,6 +302,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 36.3, y: -22.8, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59760f0884616b47917b7c41d1167e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
+  moveDuration: 0.2
+--- !u!114 &1366025154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+  m_PrefabInstance: {fileID: 3532806959298248474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc430edf06e4084181ba92d3f36692c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914902940
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,13 +356,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0c1453441005840b9f4bddbf5be187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duck: {fileID: 1366025154}
+  terrainList:
+  - {fileID: 3442756701420017055, guid: 529ee3bc31081fe4a9c1978d7719d3aa, type: 3}
+  - {fileID: 7770450234176772487, guid: 1a61285a9febddb4dbd639c6b8c02f6c, type: 3}
   grassPrefabs: {fileID: 3442756701420017055, guid: 529ee3bc31081fe4a9c1978d7719d3aa, type: 3}
   roadPrefabs: {fileID: 7770450234176772487, guid: 1a61285a9febddb4dbd639c6b8c02f6c, type: 3}
   initialGrassCount: 5
-  horizontalSize: 11
-  backViewPos: -6
-  forwardViewPos: 17
-  treeProbability: 0
+  horizontalSize: 9
+  backViewDistance: -4
+  forwardViewDistance: 15
+  treeProbability: 0.5
+  travelDistance: 0
 --- !u!4 &1914902942
 Transform:
   m_ObjectHideFlags: 0
@@ -359,6 +390,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 963194229}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1914902941}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateTravelDistance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DuckCamera, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532806959936722058, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
+      propertyPath: OnJumpEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3532806959936722068, guid: be1c9293d184d5145b3aeb0f41f48c7f, type: 3}
       propertyPath: m_Name
       value: Duck
