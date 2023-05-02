@@ -331,6 +331,7 @@
 -r:"D:/UnityProject/Crossy-Box/Crossy Box/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"D:/UnityProject/Crossy-Box/Crossy Box/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-firstpass.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -359,12 +360,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Low Poly Guns/Scripts/GunsMenu.cs"
 "Assets/Low Poly Guns/Scripts/GunView.cs"
+"Assets/Script/Car.cs"
 "Assets/Script/Duck.cs"
 "Assets/Script/DuckCamera.cs"
 "Assets/Script/Grass.cs"
 "Assets/Script/PlayManager.cs"
 "Assets/Script/Road.cs"
 "Assets/Script/Terrain.cs"
+"Assets/Script/Tree.cs"
 -langversion:9.0
 
 /deterministic

@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class PlayManager : MonoBehaviour
 {
-    [SerializeField] Duck duck;
     [SerializeField] List<Terrain> terrainList;
     [SerializeField] int initialGrassCount = 5;
     [SerializeField] int horizontalSize;
@@ -41,6 +40,8 @@ public class PlayManager : MonoBehaviour
         {
             SpawnRandomTerrain(zPos);
         }
+
+        OnUpdateTerrainLimit.Invoke(horizontalSize, travelDistance + backViewDistance);
     }
 
     private Terrain SpawnRandomTerrain(int zPos)
