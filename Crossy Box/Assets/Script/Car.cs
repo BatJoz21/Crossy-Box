@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    [SerializeField, Range(0, 5)] float speed = 1;
+    [SerializeField, Range(0, 10)] float speed = 1;
     Vector3 initialPosition;
     float distanceLimit = float.MaxValue;
 
-    public void SetDistanceLimit(float distance)
+    public void SetUpDistanceLimit(float distance)
     {
         this.distanceLimit = distance;
     }

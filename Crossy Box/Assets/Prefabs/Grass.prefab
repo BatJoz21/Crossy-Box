@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 5642645319235432558, guid: d3c583a4af37b084d9892636b0317b36, type: 3}
   treePrefabs:
-  - {fileID: 2646291679232128246, guid: a31108c1a62e1eb499d234f8c5f84dba, type: 3}
-  - {fileID: 2646291679232128246, guid: aa9627173a2e16641afebffe6f5fbc9a, type: 3}
-  - {fileID: 2646291679232128246, guid: de6b5f1dc7d30694baa9fbccc088cb49, type: 3}
+  - {fileID: 6270645793762067914, guid: a31108c1a62e1eb499d234f8c5f84dba, type: 3}
+  - {fileID: 670055678720988899, guid: aa9627173a2e16641afebffe6f5fbc9a, type: 3}
+  - {fileID: 6409101109833802375, guid: de6b5f1dc7d30694baa9fbccc088cb49, type: 3}
   treeProbability: 0.25

@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
 public class Grass : Terrain
 {
-    [SerializeField] List<GameObject> treePrefabs;
+    [SerializeField] List<Tree> treePrefabs;
     [SerializeField, Range(0, 1)] float treeProbability;
 
     public void SetTreePercentage(float newProb)
@@ -35,6 +36,7 @@ public class Grass : Terrain
             // hapus posisi yang sudah dipilih
             emptyPosition.RemoveAt(randomIndex);
 
+            Debug.Log(pos);
             SpawnRandomTree(pos);
             
         }
@@ -51,8 +53,11 @@ public class Grass : Terrain
 
         var tree = Instantiate(
             prefab,
-            new Vector3(xPos, 0, this.transform.position.z),
-            Quaternion.identity,
+            new Vector3(xPos, 0, this.transform.position.z), 
+            Quaternion.identity, 
             transform);
+
+        tree.enabled = false;
+        tree.enabled = true;
     }
 }

@@ -16,15 +16,22 @@ public class Road : Terrain
     {
         if (Random.value > 0.5f)
         {
-            carSpawnPosition = new Vector3(horizontalSize / 2 + 3, 0, this.transform.position.z);
+            carSpawnPosition = new Vector3(
+                horizontalSize / 2 + 3, 
+                0, 
+                this.transform.position.z);
 
             carRotation = Quaternion.Euler(0, -90, 0);
         }
         else
         {
+            carSpawnPosition = new Vector3(
+                -(horizontalSize / 2 + 3), 
+                0, 
+                this.transform.position.z);
             new Vector3(-(horizontalSize / 2 + 3), 0, this.transform.position.z);
             carRotation = Quaternion.Euler(0, 90, 0);
-        }            
+        }
     }
 
     private void Update()
@@ -35,7 +42,7 @@ public class Road : Terrain
 
             var car = Instantiate(carPrefab, carSpawnPosition, carRotation);
 
-            car.SetDistanceLimit(horizontalSize + 6);
+            car.SetUpDistanceLimit(horizontalSize + 6);
 
             return;
         }
