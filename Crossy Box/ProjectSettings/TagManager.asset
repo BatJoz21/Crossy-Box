@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Car
   - Coin
+  - TIE Fighter
   layers:
   - Default
   - TransparentFX

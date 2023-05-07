@@ -369,6 +369,7 @@
 "Assets/Script/Road.cs"
 "Assets/Script/ScoreText.cs"
 "Assets/Script/Terrain.cs"
+"Assets/Script/TieFighter.cs"
 "Assets/Script/Tree.cs"
 -langversion:9.0
 
