@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class TieFighter : MonoBehaviour
 {
-    [SerializeField, Range(0, 1)] float speed;
+    [SerializeField, Range(0, 50)] float speed = 25;
     [SerializeField] Duck targetDuck;
+
     void Update()
-    {
+    {   
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }

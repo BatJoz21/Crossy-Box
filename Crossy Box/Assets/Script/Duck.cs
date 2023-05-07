@@ -20,7 +20,7 @@ public class Duck : MonoBehaviour
 
     void Update()
     {
-        if (isMoveable)
+        if (isMoveable == false)
         {
             return;
         }
@@ -72,6 +72,11 @@ public class Duck : MonoBehaviour
         transform.forward = direction;
     }
 
+    public void SetMoveable(bool var)
+    {
+        isMoveable = var;
+    }
+
     public void UpdateMoveLimit(int horizontalSize, int backLimit)
     {
         leftMoveLimit = - horizontalSize / 2;
@@ -88,14 +93,25 @@ public class Duck : MonoBehaviour
     {
         if (other.CompareTag("Car"))
         {
-            if (isMoveable == true)
+            if (isMoveable == false)
             {
                 return;
             }
-            transform.DOScaleY(0.1f, 0.2f);
+            transform.DOScale(new Vector3(2, 0.1f, 2), 0.2f);
 
-            isMoveable = true;
-            Invoke("Die", 3);
+            isMoveable = false;
+            Invoke("Die", 1.5f);
+        }
+        else if (other.CompareTag("Tree"))
+        {
+            if (isMoveable == false)
+            {
+                return;
+            }
+            transform.DOScale(new Vector3(2, 0.1f, 2), 0.2f);
+
+            isMoveable = false;
+            Invoke("Die", 1.5f);
         }
         else if (other.CompareTag("Coin"))
         {
@@ -108,7 +124,7 @@ public class Duck : MonoBehaviour
             if (this.transform != other.transform)
             {
                 this.transform.SetParent(other.transform);
-                Invoke("Die", 3);
+                Invoke("Die", 1.5f);
             }
         }
     }

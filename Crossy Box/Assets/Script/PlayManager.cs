@@ -20,7 +20,6 @@ public class PlayManager : MonoBehaviour
     [SerializeField] private int coin;
 
     public UnityEvent<int, int> OnUpdateTerrainLimit;
-
     public UnityEvent<int> OnScoreUpdate;
 
     void Start()

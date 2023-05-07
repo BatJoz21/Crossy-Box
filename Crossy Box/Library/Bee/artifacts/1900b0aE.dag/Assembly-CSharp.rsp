@@ -362,14 +362,18 @@
 "Assets/Low Poly Guns/Scripts/GunView.cs"
 "Assets/Script/Car.cs"
 "Assets/Script/Coin.cs"
+"Assets/Script/CountdownTimer.cs"
 "Assets/Script/Duck.cs"
 "Assets/Script/DuckCamera.cs"
+"Assets/Script/GameOverText.cs"
 "Assets/Script/Grass.cs"
+"Assets/Script/Menu Script/ChangeScene.cs"
 "Assets/Script/PlayManager.cs"
 "Assets/Script/Road.cs"
 "Assets/Script/ScoreText.cs"
 "Assets/Script/Terrain.cs"
 "Assets/Script/TieFighter.cs"
+"Assets/Script/TIESpawner.cs"
 "Assets/Script/Tree.cs"
 -langversion:9.0
 
