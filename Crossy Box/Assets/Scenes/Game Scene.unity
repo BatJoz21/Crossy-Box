@@ -573,6 +573,14 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 296981854}
+    - target: {fileID: 1635456902870335040, guid: d31fb5c3eeae98a4ab99ddd055e66b5c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635456902870335040, guid: d31fb5c3eeae98a4ab99ddd055e66b5c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1635456902880351321, guid: d31fb5c3eeae98a4ab99ddd055e66b5c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
