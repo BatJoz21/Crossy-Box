@@ -15,6 +15,9 @@ public class Duck : MonoBehaviour
     public UnityEvent<Vector3> OnJumpEnd;
     public UnityEvent<int> OnGetCoin;
     public UnityEvent OnDie;
+    public UnityEvent OnMove;
+    public UnityEvent HitTree;
+    public UnityEvent HitCar;
 
     private bool isMoveable = false;
 
@@ -33,18 +36,22 @@ public class Duck : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             dir += Vector3.forward;
+            OnMove.Invoke();
         }
         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             dir += Vector3.back;
+            OnMove.Invoke();
         }
         else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             dir += Vector3.left;
+            OnMove.Invoke();
         }
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             dir += Vector3.right;
+            OnMove.Invoke();
         }
 
         if (dir == Vector3.zero)
@@ -97,6 +104,7 @@ public class Duck : MonoBehaviour
             {
                 return;
             }
+            HitCar.Invoke();
             transform.DOScale(new Vector3(2, 0.1f, 2), 0.2f);
 
             isMoveable = false;
@@ -108,6 +116,7 @@ public class Duck : MonoBehaviour
             {
                 return;
             }
+            HitTree.Invoke();
             transform.DOScale(new Vector3(2, 0.1f, 2), 0.2f);
 
             isMoveable = false;
